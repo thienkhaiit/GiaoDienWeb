@@ -1,0 +1,98 @@
+.wrap{
+    margin-top: 5%;
+}
+.nav{
+width: 25%;
+height: auto;
+float: left;
+background-color: lightgray;
+
+}
+.content{
+width: 75%;
+height: auto;
+float: right;
+
+}
+i{
+font-size: 15px;
+color: blue
+}
+span{
+font-size: 15px;
+color: blue
+}
+.nav li{
+list-style: none;
+padding: 7%;
+width: 115%;
+}
+.nav li:hover{
+background-color: aqua;
+width:210%;
+border: 1px solid rgb(238, 10, 227);
+margin-left: -22px
+}
+button{
+margin: 0 5px 0;
+}
+th{
+text-align: center;
+}
+h4{
+text-align: center;
+width: 190%;
+}
+.nut{
+font-size:30px;
+padding:5px;
+margin-left:230px
+}
+.a{
+font-size:50px
+}
+.content{
+padding:3%
+}
+.show{
+width:70PX;
+height: 30PX;
+border-radius: 5px;
+text-align: center;
+float: right;
+margin-right: 50px;
+}
+.input{
+height:30px;
+}
+.table{
+text-align: center;
+margin-top:20px;
+}
+.submit1{
+padding: 4px;
+}
+.btn{
+padding-bottom: 3px
+}
+.btn2{
+background-color: #fff;
+border: none;
+}
+.span1{
+color:#007fff;
+padding:3px
+}
+.span2{
+margin:0 8px;
+color:#007fff;
+padding:3px
+}
+.span3{
+margin:0 8px;
+color:#ff0000;
+padding:3px
+}
+.nav1{
+float:right
+}
