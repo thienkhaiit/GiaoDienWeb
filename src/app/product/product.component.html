@@ -10,37 +10,45 @@
                 <thead>
                     <tr>
                         <th scope="col">
-                        <button type="button" class="btn btn-primary">Hien image</button>
+                        <button type="button" class="btn btn-primary" (click)='anhien(isShow)' >Hien image</button>
                         </th>
                         <th scope="col">Product</th>
                         <th scope="col">code</th>
                         <th scope="col">Available</th>
                         <th scope="col">Price</th>
-                        <th scope="col">5 star Rating</th>
+                        <!-- <th scope="col">5 star Rating</th> -->
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr *ngFor='let p of listproduct'>
                         <td>
-                            <img src="assets\anh\choi.jpg" >
+                            <img src="assets\anh\{{p.imageUrl}}" *ngIf='isShow' >
                         </td>
                         <td>
-                            Leaft rake
+                           {{p.productName}}
                         </td>
                         <td>
-                            gdn-0011
+                            {{p.productCode}}
                         </td>
                         <td>
-                            march 19,2016
+                            {{p.releaseDate}}
                         </td>
                         <td>
-                            $19.95
+                            {{p.price}}
                         </td>
-                        <td>
+                        <!-- <td>
                             <i class="material-icons">&#xe838;&#xe838;&#xe838;</i>
-                        </td>
+                        </td> -->
                     </tr>
                     <tr>
+                        <td colspan="4">
+                            Tổng:
+                        </td>
+                        <td>
+                            {{tong()}}
+                        </td>
+                    </tr>
+                    <!-- <tr>
                         <th scope="row">
                             <img src="assets\anh\xe-gom-rac-ton.gif">
                         </th>
@@ -103,7 +111,7 @@
                         <td>
                             <i class="material-icons">&#xe838;&#xe838;&#xe838;&#xe838;</i>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
