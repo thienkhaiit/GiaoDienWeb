@@ -70,7 +70,7 @@ export class Cart1Component implements OnInit {
   }
   Tu(Id)
   {
-    for(let i=1;i<this.listproduct.length;i--)
+    for(let i=0;i<this.listproduct.length;i++)
     {
       if(this.listproduct[i].productId===Id){
         this.listproduct[i].sl--
