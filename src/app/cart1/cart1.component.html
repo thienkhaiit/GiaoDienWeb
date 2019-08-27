@@ -28,24 +28,21 @@
                 <td class="td">
                    {{p.sl}}
                         <button (click)='Tang(p.productId)' type="button" class="btn btn-success ">+</button>
-                        <button type="button" class="btn btn-danger">-</button>
+                        <button (click)='Tu(p.productId)' type="button" class="btn btn-danger">-</button>
                 </td>
                 <td class="td">
                         <button type="button" class="btn btn-primary">View</button>
-                        <button type="button"  class="btn btn-danger">Delete</button>
-                    
+                        
+                       <button type="button"  class="btn btn-danger">Delete</button>
                 </td>
             </tr>
             <tr>
                 <td class="tong"colspan="3"><b>Tổng:</b></td>
+                
                 <td class="tien" colspan="3">  <b>{{ TongTien() }}</b> </td>
             </tr>
 
         </tbody>
     </table>
-    <!-- <script>
-            $(".close1").click(function () {
-                $(".close1").hide();
-            });
-    </script> -->
+  
 </div>
