@@ -1,46 +1,51 @@
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">
-                ID
-            </th>
-            <th scope="col">
-                Image
-            </th>
-            <th scope="col">
-                Name
-            </th>
-            <th scope="col">
-                Price
-            </th>
-            <th scope="col">
-                Quatity
-            </th>
-            <th scope="col">
-                Action
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                1
-            </td>
-            <td>
-                <img src="">
-            </td>
-            <td>
-                iphone
-            </td>
-            <td>
-                300
-            </td>
-            <td>
-                +-
-            </td>
-            <td>
-                view delete
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quatity</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let p of listproduct' >
+                <td class="td">
+                   {{p.productId}}
+                </td>
+                <td >
+                   <img src="assets\anhbai3\{{p.imageUrl}}" *ngIf='isShow' >
+                </td>
+                <td class="td">
+                        {{p.productName}}
+                   
+                </td>
+                <td class="td">
+                        {{p.price}}
+                </td>
+                <td class="td">
+                   {{p.sl}}
+                        <button (click)='Tang(p.productId)' type="button" class="btn btn-success ">+</button>
+                        <button type="button" class="btn btn-danger">-</button>
+                </td>
+                <td class="td">
+                        <button type="button" class="btn btn-primary">View</button>
+                        <button type="button"  class="btn btn-danger">Delete</button>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="tong"colspan="3"><b>Tổng:</b></td>
+                <td class="tien" colspan="3">  <b>{{ TongTien() }}</b> </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <!-- <script>
+            $(".close1").click(function () {
+                $(".close1").hide();
+            });
+    </script> -->
+</div>

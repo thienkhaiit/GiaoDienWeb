@@ -68,12 +68,5 @@ export class ProductComponent implements OnInit {
   {
     this.isShow=!this.isShow;
   }
-  tong(){
-    let s=0;
-    for(let i=0;i<this.listproduct.length;i++)
-    {
-      s=s+this.listproduct[i].price;
-    }
-  }
-
+  
 }

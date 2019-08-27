@@ -10,7 +10,7 @@
                 <thead>
                     <tr>
                         <th scope="col">
-                        <button type="button" class="btn btn-primary" (click)='anhien(isShow)' >Hien image</button>
+                        <button type="button" class="btn btn-primary" (click)="anhien()">Hien image</button>
                         </th>
                         <th scope="col">Product</th>
                         <th scope="col">code</th>
@@ -22,96 +22,24 @@
                 <tbody>
                     <tr *ngFor='let p of listproduct'>
                         <td>
-                            <img src="assets\anh\{{p.imageUrl}}" *ngIf='isShow' >
+                            <img src="assets\anh\{{p.imageUrl}}" *ngIf="isShow">
                         </td>
-                        <td>
+                        <td class="td">
                            {{p.productName}}
                         </td>
-                        <td>
+                        <td class="td">
                             {{p.productCode}}
                         </td>
-                        <td>
+                        <td class="td">
                             {{p.releaseDate}}
                         </td>
-                        <td>
+                        <td class="td">
                             {{p.price}}
                         </td>
                         <!-- <td>
                             <i class="material-icons">&#xe838;&#xe838;&#xe838;</i>
                         </td> -->
                     </tr>
-                    <tr>
-                        <td colspan="4">
-                            Tổng:
-                        </td>
-                        <td>
-                            {{tong()}}
-                        </td>
-                    </tr>
-                    <!-- <tr>
-                        <th scope="row">
-                            <img src="assets\anh\xe-gom-rac-ton.gif">
-                        </th>
-                        <td>garden cart</td>
-                        <td>gdn-033</td>
-                        <td>
-                            march 18,2016
-                        </td>
-                        <td>
-                            $32.32
-                        </td>
-                        <td>
-                            <i class="material-icons">&#xe838;&#xe838;&#xe838;&#xe838;</i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <img src="assets\anh\buasat.jpg">
-                        </th>
-                        <td>garden cart</td>
-                        <td>gdn-033</td>
-                        <td>
-                            march 18,2016
-                        </td>
-                        <td>
-                            $32.32
-                        </td>
-                        <td>
-                            <i class="material-icons">&#xe838;&#xe838;&#xe838;&#xe838;&#xe838;</i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <img src="assets\anh\cuago.jpg">
-                        </th>
-                        <td>saw</td>
-                        <td>gdn-033</td>
-                        <td>
-                            march 18,2016
-                        </td>
-                        <td>
-                            $32.32
-                        </td>
-                        <td>
-                            <i class="material-icons">&#xe838;&#xe838;&#xe838;&#xe838;</i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <img src="assets\anh\dochoidientu.jpg">
-                        </th>
-                        <td>video game controller</td>
-                        <td>gdn-033</td>
-                        <td>
-                            march 18,2016
-                        </td>
-                        <td>
-                            $32.32
-                        </td>
-                        <td>
-                            <i class="material-icons">&#xe838;&#xe838;&#xe838;&#xe838;</i>
-                        </td>
-                    </tr> -->
                 </tbody>
             </table>
         </div>
