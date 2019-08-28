@@ -70,107 +70,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr *ngFor='let p of listproduct'>
                         <td scope="col">
-                            1
+                           {{p.productId}}
                         </td>
                         <td scope="col">
-                           công
+                           {{p.LastName}}
                         </td>
                         <td scope="col">
-                            ngô
+                            {{p.FirstName}}
                         </td>
                         <td scope="col">
-                          cong@gmail.com
+                          {{p.EMail}}
                         </td>
                         
                         <td scope="col">
                                 <button class="btn2" ><span class="glyphicon span1">&#xe086;</span></button>
                                 <button class="btn2" > <span class="glyphicon span2">&#x270f;</span></button>
                                 <button class="btn2" ><span class="glyphicon span3">&#xe020;</span></button>
-                                 
                         </td>
                     </tr>
-                    <tr>
-                            <td scope="col">
-                               2
-                            </td>
-                            <td scope="col">
-                               công
-                            </td>
-                            <td scope="col">
-                                phượng
-                            </td>
-                            <td scope="col">
-                              puong@gmail.com
-                            </td>
-                            
-                            <td scope="col">
-                                <button class="btn2" ><span class="glyphicon span1">&#xe086;</span></button>
-                                <button class="btn2" > <span class="glyphicon span2">&#x270f;</span></button>
-                                <button class="btn2" ><span class="glyphicon span3">&#xe020;</span></button>
-                            </td>
-                        </tr>
-                        <tr>
-                                <td scope="col">
-                                    3
-                                </td>
-                                <td scope="col">
-                                   công
-                                </td>
-                                <td scope="col">
-                                    dinh
-                                </td>
-                                <td scope="col">
-                                  dinh@gmail.com
-                                </td>
-                                
-                                <td scope="col">
-                                    <button class="btn2" ><span class="glyphicon span1">&#xe086;</span></button>
-                                    <button class="btn2" > <span class="glyphicon span2">&#x270f;</span></button>
-                                    <button class="btn2" ><span class="glyphicon span3">&#xe020;</span></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                    <td scope="col">
-                                        4
-                                    </td>
-                                    <td scope="col">
-                                       công
-                                    </td>
-                                    <td scope="col">
-                                        vũ
-                                    </td>
-                                    <td scope="col">
-                                      vu@gmail.com
-                                    </td>
-                                    
-                                    <td scope="col">
-                                        <button class="btn2" ><span class="glyphicon span1">&#xe086;</span></button>
-                                        <button class="btn2" > <span class="glyphicon span2">&#x270f;</span></button>
-                                        <button class="btn2" ><span class="glyphicon span3">&#xe020;</span></button>  
-                                    </td>
-                                </tr>
-                                <tr>
-                                        <td scope="col">
-                                            5
-                                        </td>
-                                        <td scope="col">
-                                           công
-                                        </td>
-                                        <td scope="col">
-                                            công
-                                        </td>
-                                        <td scope="col">
-                                          cong@gmail.com
-                                        </td>
-                                        
-                                        <td scope="col">
-                                            <button class="btn2" ><span class="glyphicon span1">&#xe086;</span></button>
-                                            <button class="btn2" > <span class="glyphicon span2">&#x270f;</span></button>
-                                            <button class="btn2" ><span class="glyphicon span3">&#xe020;</span></button>
-                                        </td>
-                                    </tr>
                 </tbody>
             </table>
             <div id="footer">
@@ -184,7 +103,6 @@
                                       <li class="page-item">
                                         <a class="page-link" href="#" aria-label="Previous">
                                           <span aria-hidden="true">&laquo;</span>
-                                         
                                         </a>
                                       </li>
                                       <li class="page-item "><a class="page-link " href="#">1</a></li>
