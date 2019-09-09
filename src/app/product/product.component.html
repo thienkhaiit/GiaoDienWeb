@@ -37,12 +37,22 @@
                             {{p.price}}
                         </td>
                         <td class="td">
-                              
-                            <i class="material-icons">&#xe838;&#xe838;&#xe838;</i>
+                                <star-rating-comp get-half-star-visible="parentCtrl.getHalfStarVisible(rating)" rating="3.1"></star-rating-comp>
+                            <!-- <i class="material-icons">&#xe838;&#xe838;&#xe838;</i> -->
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+   <script>
+    
+    function getHalfStarVisible(rating) {
+        var absDiff = Math.abs(rating % 1);
+        if(absDiff == 0.1) {
+            return false;
+        }
+        return absDiff > 0;
+    }
+   </script>
    

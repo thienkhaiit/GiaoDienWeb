@@ -72,7 +72,7 @@ export class Cart1Component implements OnInit {
   {
     for(let i=0;i<this.listproduct.length;i++)
     {
-      if(this.listproduct[i].productId===Id){
+      if(this.listproduct[i].productId===Id && this.listproduct[i].sl > 0){
         this.listproduct[i].sl--
       }
     }
