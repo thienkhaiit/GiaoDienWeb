@@ -1,58 +1,48 @@
 
     <div class="card " >
-        <div class="card-header">
-                List product
-               </div>
-        <div class="card-body">
-            Fliter by: <input class="text" type="text" value="tìm kiếm..." >
-            <h4 style=" text-align:left">Filtered by:</h4>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">
-                        <button type="button" class="btn btn-primary" (click)="anhien()">Hien image</button>
-                        </th>
-                        <th scope="col">Product</th>
-                        <th scope="col">code</th>
-                        <th scope="col">Available</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">5 star Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor='let p of listproduct'>
-                        <td>
-                            <img src="assets\anh\{{p.imageUrl}}" *ngIf="isShow">
-                        </td>
-                        <td class="td">
-                           {{p.productName}}
-                        </td>
-                        <td class="td">
-                            {{p.productCode}}
-                        </td>
-                        <td class="td">
-                            {{p.releaseDate}}
-                        </td>
-                        <td class="td">
-                            {{p.price}}
-                        </td>
-                        <td class="td">
-                                <star-rating-comp get-half-star-visible="parentCtrl.getHalfStarVisible(rating)" rating="3.1"></star-rating-comp>
-                            <!-- <i class="material-icons">&#xe838;&#xe838;&#xe838;</i> -->
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="card-header">
+                    List product
+                   </div>
+            <div class="card-body">
+                Fliter by: <input class="text" type="text" value="tìm kiếm..." >
+                <h4 style=" text-align:left">Filtered by:</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                            <button type="button" class="btn btn-primary" (click)="anhien()">Hien image</button>
+                            </th>
+                            <th scope="col">Product</th>
+                            <th scope="col">code</th>
+                            <th scope="col">Available</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">5 star Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let p of listproduct'>
+                            <td>
+                                <img src="assets\anh\{{p.imageUrl}}" *ngIf="isShow">
+                            </td>
+                            <td class="td">
+                                <a [routerLink]="['/product',p.productId]"> {{p.productName}} </a>
+                               
+                            </td>
+                            <td class="td">
+                                {{p.productCode}}
+                            </td>
+                            <td class="td">
+                                {{p.releaseDate}}
+                            </td>
+                            <td class="td">
+                                {{p.price}}
+                            </td>
+                            <td class="td">
+                                <i class="material-icons">&#xe838;&#xe838;&#xe838;</i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-   <script>
-    
-    function getHalfStarVisible(rating) {
-        var absDiff = Math.abs(rating % 1);
-        if(absDiff == 0.1) {
-            return false;
-        }
-        return absDiff > 0;
-    }
-   </script>
-   
+       
