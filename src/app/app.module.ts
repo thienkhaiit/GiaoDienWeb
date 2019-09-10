@@ -22,6 +22,7 @@ import { Cart1Component } from './cart1/cart1.component';
       { path: '',component: ProductComponent },
       {path: 'product', component:ProductComponent},
       {path: 'cart1', component:Cart1Component},
+      {path: 'cart', component:CartComponent},
       { path: 'product/:productId', component: ProductdetaillComponent },
       { path: '**', redirectTo: '', pathMatch: 'full' },
       ])

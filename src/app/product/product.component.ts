@@ -30,7 +30,7 @@ export class ProductComponent implements OnInit {
         "imageUrl": "xe-gom-rac-ton.gif"
     },
     {
-        "productId": 5,
+        "productId": 3,
         "productName": "Hammer",
         "productCode": "TBX-0048",
         "releaseDate": "May 21, 2016",
@@ -40,7 +40,7 @@ export class ProductComponent implements OnInit {
         "imageUrl": "buasat.jpg"
     },
     {
-        "productId": 8,
+        "productId": 4,
         "productName": "Saw",
         "productCode": "TBX-0022",
         "releaseDate": "May 15, 2016",
@@ -50,7 +50,7 @@ export class ProductComponent implements OnInit {
         "imageUrl": "cuago.jpg"
     },
     {
-        "productId": 10,
+        "productId": 5,
         "productName": "Video Game Controller",
         "productCode": "GMG-0042",
         "releaseDate": "October 15, 2015",

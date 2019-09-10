@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {CartServiceService} from '../cart-service.service';
 @Component({
   selector: 'app-productdetaill',
   templateUrl: './productdetaill.component.html',
@@ -31,7 +32,7 @@ listproduct=[
       "imageUrl": "xe-gom-rac-ton.gif"
   },
   {
-      "productId": 5,
+      "productId": 3,
       "productName": "Hammer",
       "productCode": "TBX-0048",
       "releaseDate": "May 21, 2016",
@@ -41,7 +42,7 @@ listproduct=[
       "imageUrl": "buasat.jpg"
   },
   {
-      "productId": 8,
+      "productId": 4,
       "productName": "Saw",
       "productCode": "TBX-0022",
       "releaseDate": "May 15, 2016",
@@ -51,7 +52,7 @@ listproduct=[
       "imageUrl": "cuago.jpg"
   },
   {
-      "productId": 10,
+      "productId": 5,
       "productName": "Video Game Controller",
       "productCode": "GMG-0042",
       "releaseDate": "October 15, 2015",
@@ -61,13 +62,20 @@ listproduct=[
       "imageUrl": "dochoidientu.jpg"
   },
 ];
-  constructor(private route:ActivatedRoute) { }
+  constructor(private route:ActivatedRoute,private cart:CartServiceService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(para=>{
       this.pid=+para.get('productId');
     });
     this.product=this.listproduct.find(p=>p.productId===this.pid);
+    this.pageTitle=this.product.productName;
   }
-
+  AddToCart(){
+    let appProduct=Object.assign(this.product,{'quatity':1});
+    this.cart.AddToCart(this.product);
+  }
+  onBack(){
+    window.history.back();
+  }
 }

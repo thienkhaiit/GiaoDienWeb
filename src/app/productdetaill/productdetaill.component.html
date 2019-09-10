@@ -6,6 +6,7 @@
     <div class="card-body">
      <div class="row">
          <div class="col-md-3">
+             <p>ID</p>
              <p>name:</p>
              <p>code:</p>
              <p class="p" >description:</p>
@@ -13,21 +14,27 @@
              <p>price:</p>
              <p>5 star rating</p>
          </div>
-         <div class="col-md-2 ">
-             <p>Leaf rake</p>
-             <p>gdn-0010</p>
-             <p>leat rake with 48-inch wooden handle</p>
-             <p>march 19,2016</p>
-             <p>$19.95</p>
-             <p>3.2</p>
+         <div class="col-md-2 " >
+             <p>{{product.productId}}</p>
+             <p>{{product.productName}}</p>
+             <p>{{product.productCode}}</p>
+             <p>{{product.description}}</p>
+             <p>{{product.releaseDate}}</p>
+             <p>{{product.price}}</p>
+             <p>{{product.starRating}}</p>
+             
          </div>
          <div class="col-md-6">
-             <img src="assets\anh\choi.jpg">
+            <img src="assets\anh\{{product.imageUrl}}" >
          </div>
         </div>
      
     </div>
     <div class="card-footer text-muted">
-        <i style='font-size:15px' class='fas'>&#xf060;</i> Back
+        <i style='font-size:15px' class='fas'>&#xf060;</i> 
+        <a [routerLink]="['/product']">
+            <button type="button" class="btn">Back</button>
+        </a>
+        <button type="button" class="btn btn-primary">AddToCart</button>
     </div>
   </div>
