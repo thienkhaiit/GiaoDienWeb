@@ -1,0 +1,41 @@
+
+    <div class="card " >
+            <div class="card-header">
+                <i style="font-size:24px" class="fa">&#xf073; <b>Danh Sách Sinh Viên</b> </i> 
+            </div>
+            <div class="card-body">
+            <input class="text" type="text" value="tìm kiếm..." >
+            <button type="button" class="btn btn-info">
+                <span class="glyphicon submit1" title="submit" >&#xe003;</span>
+            </button>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">LastName</th>
+                            <th scope="col">FirstName</th>
+                            <th scope="col">EnrollData</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let p of students'>
+                            <td class="td">
+                                {{p.FirstMidName}}
+                            </td>
+                            <td class="td">
+                                {{p.LastName}}
+                            </td>
+                            <td class="td">
+                                {{p.EnrollmentDate}}
+                            </td>
+                            <td class="td">
+                                 <a [routerLink]="['/sinhvien',p.Id]"> <i style='font-size:24px' class='fas'>&#xf12a;</i></a>
+                                
+                                 <i style="font-size:24px" class="fa">&#xf014;</i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       

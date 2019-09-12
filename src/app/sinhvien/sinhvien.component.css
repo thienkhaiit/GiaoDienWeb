@@ -1,0 +1,47 @@
+
+.text{
+    margin-left: 5%;
+    color:#b2b2b2;
+    font-size: 20px;
+    width: 20%;
+    border-radius: 5px
+}
+img{
+    width:100px;
+    height: 50px;
+}
+.td{
+    padding: 25px;
+}
+table th{
+    text-align: center
+}
+table td{
+    text-align: center
+}
+b{
+    color: rgb(4, 139, 250)
+}
+.card{
+    background-color: rgb(252, 247, 251)
+}
+.card-header{
+    background-color: rgb(230, 168, 118)
+}
+.table{
+    border: 1px  solid rgb(150, 235, 220);
+    margin-top: 20px;
+  
+}
+.btn{
+    cursor: unset;
+    font-size: 14px;
+    margin-top: -6.5px;
+    margin-left: -3.5%;
+}
+.fa{
+    padding: 0px 25px;
+}
+.fas{
+    margin-left: 10%
+}
