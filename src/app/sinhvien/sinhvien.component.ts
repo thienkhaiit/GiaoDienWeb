@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { match } from 'minimatch';
 
 @Component({
   selector: 'app-product',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sinhvien.component.css']
 })
 export class SinhvienComponent implements OnInit {
+  p:number =1;
   students=[
     {
         "Id":1,
@@ -57,10 +59,38 @@ export class SinhvienComponent implements OnInit {
       "EnrollmentDate": "2005-09-01",
     },
   ]
-  constructor() { }
-
-  ngOnInit() {
+  currentPage=1;
+  itemsPerPage=3;
+  totalPage:number;
+  OrderName="name";
+  next(){
+    if(this.currentPage < this.totalPage)
+    
+      this.currentPage++
+    
   }
- 
+  Previous(){
+    // if(this.itemsPerPage*this.currentPagethis.students.length){
+      this.currentPage--
+  }
+  LastPege(){
+    this.currentPage=this.totalPage
+  }
+  OrderBy(strOrder:string){
+    this.OrderName=strOrder;
+  }
+  constructor() {}
   
-}
+  ngOnInit() {
+    this.totalPage=Math.ceil(this.students.length/this.itemsPerPage);
+
+  }
+  delete(iddd) {
+    var a = confirm ('bạn đã xóa thành công');
+    if ( a == true){
+      const index= this.students.findIndex( word => word.Id === iddd);
+      this.students.splice(index , 1);
+    } else {
+      return false;
+  }
+}}

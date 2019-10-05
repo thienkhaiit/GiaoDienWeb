@@ -1,0 +1,28 @@
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">họ và tên</label>
+      <input type="text" [(ngModel)]="ht.ten"[ngModelOptions]="{standalone: true}" class="form-control"  >
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">ngày sinh</label>
+        <input type="date" [(ngModel)]="ht.ngay"[ngModelOptions]="{standalone: true}" class="form-control"  >
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">giới tính:</label>
+        <select [(ngModel)]="ht.gtinh"[ngModelOptions]="{standalone: true}">
+            <option value="nam">nam</option>
+            <option value="nu">nu</option>
+        </select>
+        
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">điểm</label>
+        <input type="number" [(ngModel)]="ht.diem"[ngModelOptions]="{standalone: true}" class="form-control"  placeholder="diem">
+    </div>
+    <div class="form-group">
+        <div class="alert alert-success" role="alert">
+            {{ketqua()}}
+          </div>
+    </div>
+  </form>

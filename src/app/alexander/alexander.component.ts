@@ -472,6 +472,8 @@ students=[
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
+    
+    /*xét id=id load dử liệu*/
     this.route.paramMap.subscribe(para=>{
       this.pid=+para.get('Id');
     });

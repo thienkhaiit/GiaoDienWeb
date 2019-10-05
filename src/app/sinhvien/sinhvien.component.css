@@ -12,6 +12,7 @@ img{
 }
 .td{
     padding: 25px;
+ 
 }
 table th{
     text-align: center
@@ -33,15 +34,25 @@ b{
     margin-top: 20px;
   
 }
-.btn{
+/* .button{
     cursor: unset;
-    font-size: 14px;
-    margin-top: -6.5px;
-    margin-left: -3.5%;
-}
+ font-size: 15px
+} */
 .fa{
     padding: 0px 25px;
+  
 }
 .fas{
     margin-left: 10%
+}
+i{
+    cursor: pointer;
+}
+.left{
+    width: 70%;
+    float: left;
+}
+.right{
+    width: 30%;
+    float: right;
 }
