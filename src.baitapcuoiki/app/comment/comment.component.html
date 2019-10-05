@@ -1,0 +1,195 @@
+
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1" id="logout">
+        <div class="page-header">
+            <h1 class=" reviews1">Leave Your Comment</h1>
+            <div class="logout">
+                <button class="btn btn-default btn-circle text-uppercase" type="button" >
+                    <span class="glyphicon glyphicon-off"></span> <a href="#account-settings" role="tab" data-toggle="tab">Logout</a>                    
+                </button>                
+            </div>
+        </div>
+        <div class="comment-tabs">
+            <ul class="nav nav-tabs" role="tablist">
+                    <li class="active"><a href="#account-settings" role="tab" data-toggle="tab"><h4 class="reviews text-capitalize">Account settings</h4></a></li>
+                <!-- <li ><a href="#comments-logout" role="tab" data-toggle="tab"><h4 class="reviews text-capitalize">Comments</h4></a></li> -->
+                <!-- <li><a href="#add-comment" role="tab" data-toggle="tab"><h4 class="reviews text-capitalize">Add comment</h4></a></li> -->
+               
+            </ul>            
+            <div class="tab-content">
+              
+                <!-- <div class="tab-pane" id="add-comment">
+                  add comet
+                </div> -->
+                <div class="tab-pane active" id="account-settings" >
+                    <h3>
+                            <b>Enter Personal Information !</b></h3>
+                          <hr>
+                        <div class="row">
+                          <!-- left column -->
+                          <div class="col-md-3">
+                            <div class="text-center">
+                              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1024px-User_icon_2.svg.png" class="avatar img-circle" alt="avatar">
+                              <h6>Upload a different photo...</h6>
+                              
+                              <input type="file" class="form-control">
+                                <button type="submit" class="a btn btn-default"><i style='font-size:24px' class='fab'>&#xf082;</i></button>
+                                <button type="submit" class="aa btn btn-default"><i style='font-size:24px' class='fab'>&#xf0d5;</i></button>
+                            </div>
+                          </div>
+                          
+                          <!-- edit form column -->
+                          <div class="col-md-9 personal-info">
+                            <div class="alert alert-info alert-dismissable">
+                              <a class="panel-close close" data-dismiss="alert">×</a> 
+                              <i class="fa fa-coffee"></i> 
+                              Account Registration And Then Tomment !
+                            </div>
+                            <h4><b>Personal Info</b></h4>
+                            
+                            <form class="form-horizontal" role="form">
+                              <div class="form-group">
+                                <label class="col-lg-3 control-label">First name:</label>
+                                <div class="col-lg-8">
+                                  <input class="form-control" type="text" placeholder="tên">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-lg-3 control-label">Last name:</label>
+                                <div class="col-lg-8">
+                                  <input class="form-control" type="text" placeholder="họ">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-lg-3 control-label">Workplace:</label>
+                                <div class="col-lg-8">
+                                  <input class="form-control" type="text" placeholder="nơi làm việc">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-lg-3 control-label">Email:</label>
+                                <div class="col-lg-8">
+                                  <input class="form-control" type="text" placeholder="gmail.com">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-lg-3 control-label">Time Zone:</label>
+                                <div class="col-lg-8">
+                                  <div class="ui-select">
+                                    <select id="user_time_zone" class="form-control" >
+                                      <option value="Hawaii">(GMT-10:00) Hawaii</option>
+                                      <option value="Alaska">(GMT-09:00) Alaska</option>
+                                      <option value="Pacific Time (US &amp; Canada)">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+                                      <option value="Arizona">(GMT-07:00) Arizona</option>
+                                      <option value="Mountain Time (US &amp; Canada)">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+                                      <option value="Central Time (US &amp; Canada)" selected="selected">(GMT-06:00) Central Time (US &amp; Canada)</option>
+                                      <option value="Eastern Time (US &amp; Canada)">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+                                      <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Username:</label>
+                                <div class="col-md-8">
+                                  <input class="form-control" type="text" placeholder="tên tài khoản">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Password:</label>
+                                <div class="col-md-8">
+                                  <input class="form-control" type="password" placeholder="mật khẩu">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label">Confirm password:</label>
+                                <div class="col-md-8">
+                                  <input class="form-control" type="password" placeholder="nhập lại mật khẩu">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label class="col-md-3 control-label"></label>
+                                <div class="col-md-8">
+                                        <a href="#comments-logout" role="tab" data-toggle="tab">
+                                  <button type="submit" class="btn btn-primary "  >Create</button>    
+                                        </a>
+                                  <span>   </span>
+                                  <input type="reset" class="b btn btn-default" value="Cancel">
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                      </div>
+                    <hr>
+                    <h3 style="text-align: center">END!</h3>
+                </div>
+                <div class="tab-pane " id="comments-logout">                
+                        <div class="row bootstrap snippets">
+                            <div class="col-md-12  col-sm-12">
+                                <div class="comment-wrapper">
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            <h3>Comment Panel</h3> 
+                                        </div>
+                                        <div class="panel-body">
+                                            <textarea class="form-control" placeholder="write a comment..." rows="3"></textarea>
+                                            <br>
+                                            <button type="button" class="btn btn-info pull-right">Post</button>
+                                            <div class="clearfix"></div>
+                                            <hr>
+                                            <ul class="media-list">
+                                                <li class="media">
+                                                    <a href="#" class="pull-left">
+                                                        <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <span class="text-muted pull-right">
+                                                            <small class="text-muted">30 min ago</small>
+                                                        </span>
+                                                        <strong class="text-success">@MartinoMont</strong>
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            Lorem ipsum dolor sit amet, <a href="#">#consecteturadipiscing </a>.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <a href="#" class="pull-left">
+                                                        <img src="https://bootdey.com/img/Content/user_2.jpg" alt="" class="img-circle">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <span class="text-muted pull-right">
+                                                            <small class="text-muted">30 min ago</small>
+                                                        </span>
+                                                        <strong class="text-success">@LaurenceCorreil</strong>
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            Lorem ipsum dolor <a href="#">#ipsumdolor </a>adipiscing elit.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <a href="#" class="pull-left">
+                                                        <img src="https://bootdey.com/img/Content/user_3.jpg" alt="" class="img-circle">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <span class="text-muted pull-right">
+                                                            <small class="text-muted">30 min ago</small>
+                                                        </span>
+                                                        <strong class="text-success">@JohnNida</strong>
+                                                        <p>
+                                                            Lorem ipsum dolor <a href="#">#sitamet</a> sit amet, consectetur adipiscing elit.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+	</div>

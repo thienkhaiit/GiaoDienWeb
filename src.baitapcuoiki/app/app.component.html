@@ -1,0 +1,49 @@
+<div class=" container">
+  <div class="banner">
+      <img src="/assets/images/banner.png">
+  </div>
+  
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <!-- <a class="navbar-brand" href="#"><img src="/assets/images/logos/PHPPP.png"></a> -->
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><img src="/assets/images/logos/PHPP1.png"></li>
+          <li><a [routerLink]="['/home']"><b>MuaTC-Exam</b></a></li>
+          <li><a [routerLink]="['/introduce']"><b>Introduce</b></a></li>
+          <li><a [routerLink]="['/comment']"><b>Comment</b></a></li>
+          <!-- <li><a href="#"><b>Góp Ý</b></a></li> -->
+          <!-- <li><a href="#"><b>Hỏi Đáp</b></a></li>-->
+        </ul>
+        <ul class="nav1 navbar-nav navbar-right">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <b>Tài Khoản<i class="fa">&#xf0d7;</i></b>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <ul>
+                    <li><a class="dropdown-item" [routerLink]="['/registration']"><b>Đăng Kí</b></a></li>
+                    <li><a class="dropdown-item" [routerLink]="['/login']"><b>Đăng Nhập</b></a></li>
+                    <li><a class="dropdown-item" ><b>Quên Mật Khẩu</b></a></li>
+                  <hr>
+                    <li><a class="dropdown-item" ><b>Đăng Xuất</b></a></li>
+                    <li><a class="dropdown-item" ><b>Đổi Mật Khẩu</b></a></li>
+                    <li><a class="dropdown-item" ><b>Cập Nhật Tài Khoản</b></a></li>
+                  </ul>
+                </div>
+              </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+ 
+</div>
+
