@@ -3,24 +3,83 @@
         <h1>Welcome To The Programming Course</h1>
         <p>Some Content You May Not know!</p> 
       </div>
-        
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <h3>Column 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>Column 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>HotLine</h3>        
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <div class="row">
+        <div class="col-3 col-s-3 menu" >
+            
+          <ul >
+           
+              <li class="h4"><b>DANH MỤC MÔN HỌC</b></li>
+            <li *ngFor='let p of Subjects '><b>{{p.Name}}</b></li>
+           
+          </ul>
+        </div>
+      
+        <div class="col-6 col-s-9">
+          <h1>Content</h1>
+          <p>
+              Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.
+            Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.
+            Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.
+            Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.
+            Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.
+            Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.
+            Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.
+            Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.
+            Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.
+          
+        </div>
+      
+        <div class="col-3 col-s-12">
+          <div class="aside">
+            <h2>Hotline</h2>
+                      <button type="button"   data-toggle="modal" data-target="#myModal">
+                          <P class="a"><a ><i style='font-size:24px' class='fas'>&#xf095;</i>:01234566789</a>
+                          </P>
+                       
+                      </button>
+                      
+                      <div class="modal" id="myModal">
+                          <div class="modal-dialog">
+                              <div class="modal-content">
+
+                                  <!-- Modal Header -->
+                                  <div class="modal-header">
+                                      <h3>IPHONE</h3>
+                                  </div>
+
+                                  <!-- Modal body -->
+                                  <div class="modal-body">
+                                      <form action="Customer">
+                                        <h3 style="color: black">Cà Khịa</h3>
+                                        <p  style="color: black">đang kết nối di động...</p>
+                                       
+                                        <button type="submit" class="btn btn-primary" id="btn"> <i style='font-size:24px' class='fas'>	&#xf539;</i></button>
+                                        <button type="submit" class="btn btn-primary" id="btn"> <i style='font-size:24px' class='fas'>&#xf11c;</i></button>
+                                        <button type="submit" class="btn btn-primary" id="btn"><i style='font-size:24px' class='fas'>&#xf028;</i></button>
+                                        <button type="submit" class="btn btn-primary" id="btn"> <i style='font-size:24px' class='fas'>&#xf0fe;</i></button>
+                                        <button type="submit" class="btn btn-primary" id="btn"> <i style='font-size:24px' class='fas'>&#xf03d;</i></button>
+                                        <button type="submit" class="btn btn-primary" id="btn"> <i style='font-size:24px' class='fas'>&#xf2bd;</i></button>
+                                        <button type="button" class="btn btn-danger" style="background-color: red" data-dismiss="modal"><i class="material-icons">&#xe61f;</i></button>
+                                         
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+            <h2> Facebook</h2>
+            <p class="a"><a href="https://facebook.com" >https://facebook.com</a></p>
+            <h2>Email</h2>
+            <p class="a"><a href="https://mail.google.com">cakhia@gmail.com</a></p>
+            <h2>ZaLo</h2>
+            <p class="a"><a href="https://id.zalo.me/account/login?continue=https%3A%2F%2Fchat.zalo.me%2F">https://chat.zalo.me</a></p>
           </div>
         </div>
       </div>
       
+      <div class="footer">
+         
+        <p>
+            @20196-10-6 Ending Page Introduction</p>
+      </div>
+     
+     

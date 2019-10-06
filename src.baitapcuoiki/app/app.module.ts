@@ -5,8 +5,8 @@ import {RouterModule} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
+
+// import { RegistrationComponent } from './registration/registration.component';
 import { WebComponent } from './web/web.component';
 import { IntroduceComponent } from './introduce/introduce.component';
 import { CommentComponent } from './comment/comment.component';
@@ -34,8 +34,8 @@ import { AgileComponent } from './agile/agile.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
-    RegistrationComponent,
+    // LoginComponent,
+    // RegistrationComponent,
     WebComponent,
     IntroduceComponent,
     CommentComponent,
@@ -67,12 +67,12 @@ import { AgileComponent } from './agile/agile.component';
     AppRoutingModule,
     NgxPaginationModule,
     RouterModule.forRoot([
-      { path: '',component: RegistrationComponent   },
+      { path: '',component: HomeComponent   },
       {path: 'home', component:HomeComponent},
-      { path: 'login', component: LoginComponent },
+      // { path: 'login', component: LoginComponent },
       { path: 'introduce', component: IntroduceComponent },
       { path: 'comment', component: CommentComponent },
-      { path: 'registration', component: RegistrationComponent },
+      // { path: 'registration', component: RegistrationComponent },
       { path: 'web', component: WebComponent },
       { path: 'android', component: AndroidComponent },
       { path: 'csdl', component: CsdlComponent },
