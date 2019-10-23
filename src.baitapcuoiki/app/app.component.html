@@ -41,9 +41,9 @@
                           <span style="color:#337ab7;"><b> Login</b></span>
                       </button>
                     </li>
-                    <li style="    margin-top: -19px;"> <a class="dropdown-item" ><b>Quên Mật Khẩu</b></a></li>
+                    <li style="    margin-top: -19px;"> <a class="dropdown-item" [routerLink]="['/password']"><b>Quên Mật Khẩu</b></a></li>
                   <hr>
-                    <li><a class="dropdown-item" [routerLink]="['/login']"><b>Đăng Xuất</b></a></li>
+                    <li><a class="dropdown-item" [routerLink]="['/home']"><b>Đăng Xuất</b></a></li>
                     <li><a class="dropdown-item" ><b>Đổi Mật Khẩu</b></a></li>
                     <li><a class="dropdown-item" ><b>Cập Nhật Tài Khoản</b></a></li>
                   </ul>
@@ -54,72 +54,71 @@
     </div>
   </nav>
   <router-outlet></router-outlet>
- 
-</div>
-
+ <!-- dki -->
 <ul class="nav navbar-nav">
 
-    <li style="background-color:#222">
-        
-        <div class="modal" id="myModal">
-            <div class="modal-dialog">
-                                <div class="wrapper fadeInDown">
-                                    <div id="formContent">
-                                      <div class="fadeIn first">
-                                        <img src="https://previews.123rf.com/images/happyjob/happyjob1608/happyjob160800132/62039041-user-icon.jpg" id="icon" alt="User Icon" />
-                                      </div>
-                                      <form action="" >
-                                          <input type="text" id="password" class="fadeIn third" name="login" placeholder="Name">
-                                        <input type="email" id="login1" class="fadeIn second" name="login" placeholder="Email">
-                                        <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
-                                        <input type="password" id="password" class="fadeIn third" name="login" placeholder="Confirm Password">
-                                       
-                                        <button type="button" class="btn btn-info" style="background-color:#fff;margin-top:8px" data-toggle="modal" data-target="#myModal1">
-                                            <span style="color:#337ab7"> Login</span>
-                                        </button>
-                                      </form>
-                                     
+  <li style="background-color:#222">
+      
+      <div class="modal" id="myModal">
+          <div class="modal-dialog">
+                              <div class="wrapper fadeInDown">
+                                  <div id="formContent">
+                                    <div class="fadeIn first">
+                                      <img src="https://previews.123rf.com/images/happyjob/happyjob1608/happyjob160800132/62039041-user-icon.jpg" id="icon" alt="User Icon" />
                                     </div>
+                                    <form action="home" >
+                                        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Name">
+                                      <input type="email" id="login1" class="fadeIn second" name="login" placeholder="Email">
+                                      <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+                                      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Confirm Password">
+                                     
+                                      <button type="submit" class="btn btn-info" style="background-color:#fff;margin-top:8px" data-toggle="modal" >
+                                          <span style="color:#337ab7"> Login</span>
+                                      </button>
+                                    </form>
+                                   
                                   </div>
-            </div>
-            </div>
-    </li>
+                                </div>
+          </div>
+          </div>
+  </li>
 
 </ul>
-
+<!-- danghap -->
 <ul class="nav navbar-nav">
 
-    <li style="background-color:#222">
-        
-        <div class="modal" id="myModal1">
-            <div class="modal-dialog">
+  <li style="background-color:#222">
+      
+      <div class="modal" id="myModal1">
+          <div class="modal-dialog">
 
-                <div class="registration">
-                    <div  id="login">
-                      <section id="inner-wrapper" class="login">
-                        <article>
-                          <form action="/home">
-                            <div class="form-group">
-                              <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
-                                <input type="email" class="form-control" placeholder="Email Address">
-                              </div>
+              <div class="registration">
+                  <div  id="login">
+                    <section id="inner-wrapper" class="login">
+                      <article>
+                        <form action="/home">
+                          <div class="form-group">
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
+                              <input type="email" class="form-control" placeholder="Email Address">
                             </div>
-                            <div class="form-group">
-                              <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-key"> </i></span>
-                                <input type="password" class="form-control" placeholder="Password">
-                              </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-key"> </i></span>
+                              <input type="password" class="form-control" placeholder="Password">
                             </div>
-                              <button type="submit" class="btn btn-success btn-block"><b>Submit</b></button>
-                          </form>
-                          </article>
-                        </section>
-                    </div>
+                          </div>
+                            <button type="submit" class="btn btn-success btn-block"><b>Submit</b></button>
+                        </form>
+                        </article>
+                      </section>
                   </div>
-                    
-            </div>
-            </div>
-    </li>
+                </div>
+                  
+          </div>
+          </div>
+  </li>
 
 </ul>
+</div>

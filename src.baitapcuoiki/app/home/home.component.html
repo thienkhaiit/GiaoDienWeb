@@ -5,9 +5,9 @@
                 <div class="container">
                     <img src="assets/images/logos/{{p.Logo}}"alt="Avatar" class="image">
                         <div class="overlay">
-                            <div class="text"><h1><a href="/{{p.url}}"><b>Exam Now</b></a></h1></div>
-                           
-                            
+                            <div class="text"><h1><a [routerLink]="['/web',p.Id]"><b>Exam Now</b></a></h1></div>
+                            <!-- <a [routerLink]="['/productdetaill',p.productId]"> {{p.productName}} Exam Now</a> -->
+                            <!-- <div class="text"><h1><a [routerLink]="['/java']"><b>Exam Now</b></a></h1></div> -->
                         </div>
                 </div>
                 <div class="name">
@@ -18,24 +18,6 @@
     </div>
     <div class="col-md-4">
         <div class="menu">
-            <!-- <ul>
-                <h3>Danh Mục Môn Học</h3>
-                <li><a >Lập trình Android nâng cao</a></li>
-                <hr>
-                <li><a >Xây dựng trang web</a></li>
-                <li><a >Cơ sở dử liệu</a></li>
-                <li><a >SQL server</a></li>
-                
-                <li><a >Internext Maketing</a></li>
-                <li><a >Lập Trình Hướng đối tượng với java</a></li>
-                <li><a >Lập trình PHP</a></li>
-                <li><a >Điện toán đám mây</a></li>
-                <li><a >Lập trình Android cơ bản</a></li>
-                <li><a >Lập trình Game 2D</a></li>
-                <li><a >Thiết kế giao diện web trên Android</a></li>
-                <li><a >Thiết Kế web cho Điện thoại di động</a></li>
-                <li><a >Lập trình ASP.net</a></li>
-            </ul> -->
             <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -59,45 +41,6 @@
                                 </a>
                             </button> </a></td>
                         </tr>
-                         <!-- <tr>
-                            <td><a > Lập trình Android nâng cao </a></td>
-                        </tr>
-                        <tr>
-                            <td><a >Xây dựng trang web</a></td>
-                        </tr>
-                        <tr>
-                            <td><a >Cơ sở dử liệu</a></td>
-                        </tr>
-                        <tr>
-                            <td><a >SQL server</a></td>
-                        </tr>
-                        <tr>
-                            <td><a >Internext Maketing</a></td>
-                        </tr>
-                        <tr>
-                            <td><a >Lập Trình Hướng đối tượng với java</a></td>
-                        </tr>   
-                        <tr>
-                            <td><a >Lập trình PHP</a></td>
-                        </tr>
-                        <tr>
-                            <td><a >Điện toán đám mây</a></td>
-                        </tr>
-                        <tr>
-                            <td><a >Lập trình Android cơ bản</a></td>
-                        </tr>          
-                        <tr>
-                            <td><a >Lập trình Game 2D</a></td>
-                        </tr>
-                        <tr>
-                            <td><a >Thiết kế giao diện web trên Android</a></td>
-                        </tr>
-                        <tr>
-                            <td><a >Thiết Kế web cho Điện thoại di động</a></td>
-                        </tr> 
-                        <tr>
-                            <td><a >Lập trình ASP.net</a></td>
-                        </tr>    -->
                     </tbody>
                   </table>
         </div>

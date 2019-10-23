@@ -6,7 +6,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./web.component.css']
 })
 export class WebComponent implements OnInit {
-  laptrinh:any;
+  web:any;
   pageTitle='';
   pid;
   /*phân trang */
@@ -165,7 +165,7 @@ WEBU=[
     this.route.paramMap.subscribe(para=>{
         this.pid=+para.get('Id');
       });
-      this.laptrinh=this.WEBU.find(p=>p.Id===this.pid);
+      this.web=this.Subjects.find(p=>p.Id===this.pid);
       
       // this.pageTitle=this.sinhvien.productName;
     
