@@ -35,7 +35,7 @@ import { UpdateaccountComponent } from './updateaccount/updateaccount.component'
       { path: 'introduce', component: IntroduceComponent },
       { path: 'comment', component: CommentComponent },
       { path: 'change', component: ChangepasswordComponent },
-      { path: 'update', component: UpdateaccountComponent },
+      { path: 'updateaccount', component: UpdateaccountComponent },
       { path: 'web/:Id', component: WebComponent },
       // { path: 'web', component: WebComponent },
       { path: '**', redirectTo: '', pathMatch: 'full' },

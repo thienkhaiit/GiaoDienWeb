@@ -16,7 +16,7 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><img src="/assets/images/logos/PHPP1.png"></li>
-          <li><a [routerLink]="['/home']"><b>MuaTC-Exam</b></a></li>
+          <li><a [routerLink]="['/updateaccount']"><b>MuaTC-Exam</b></a></li>
           <li><a [routerLink]="['/introduce']"><b>Introduce</b></a></li>
           <li><a [routerLink]="['/comment']"><b>Comment</b></a></li>
           <!-- <li><a href="#"><b>Góp Ý</b></a></li> -->
@@ -43,7 +43,7 @@
                     </li>
                     <li style="    margin-top: -19px;"> <a class="dropdown-item" [routerLink]="['/password']"><b>Quên Mật Khẩu</b></a></li>
                   <hr>
-                    <li><a class="dropdown-item" [routerLink]="['/home']"><b>Đăng Xuất</b></a></li>
+                    <li><a class="dropdown-item" [routerLink]="['/introduce']"><b>Đăng Xuất</b></a></li>
                     <li><a class="dropdown-item" [routerLink]="['/change']"><b>Đổi Mật Khẩu</b></a></li>
                     <li><a class="dropdown-item" [routerLink]="['/update']"><b>Cập Nhật Tài Khoản</b></a></li>
                   </ul>
@@ -66,14 +66,14 @@
                                     <div class="fadeIn first">
                                       <img src="https://previews.123rf.com/images/happyjob/happyjob1608/happyjob160800132/62039041-user-icon.jpg" id="icon" alt="User Icon" />
                                     </div>
-                                    <form action="/home" >
+                                    
                                         <input type="text" id="password" class="fadeIn third" name="login" placeholder="Name">
                                       <input type="email" id="login1" class="fadeIn second" name="login" placeholder="Email">
                                       <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
                                       <input type="password" id="password" class="fadeIn third" name="login" placeholder="Confirm Password">
-                                     
-                                      <button type="submit" class="btn btn-info" style="background-color:#fff;margin-top:8px" data-toggle="modal" >
-                                          <span style="color:#337ab7"> Login</span>
+                                      <form action="/home" >
+                                      <button type="submit" class="btn btn-info" style="background-color:#fff;margin-top:8px;color:#337ab7" data-toggle="modal" >
+                                       Login
                                       </button>
                                     </form>
                                    
@@ -96,7 +96,7 @@
                   <div  id="login">
                     <section id="inner-wrapper" class="login">
                       <article>
-                        <form action="/home">
+                       
                           <div class="form-group">
                             <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
@@ -109,7 +109,8 @@
                               <input type="password" class="form-control" placeholder="Password">
                             </div>
                           </div>
-                            <button type="submit" class="btn btn-success btn-block"><b>Submit</b></button>
+                          <form action="/home" >
+                            <button type="submit" class="btn btn-success btn-block"><b>  Submit</b></button>
                         </form>
                         </article>
                       </section>

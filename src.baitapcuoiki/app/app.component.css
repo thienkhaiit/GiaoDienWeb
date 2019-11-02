@@ -426,3 +426,6 @@ hr {
         width: 139%;
         margin-left: 0px
     }
+    .btn a:hover{
+      background-color: none;
+    }
