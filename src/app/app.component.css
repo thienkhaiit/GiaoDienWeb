@@ -1,0 +1,89 @@
+.container{
+  margin-top:10px;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: rgb(153, 182, 214);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+  
+  /* Container for flexboxes */
+  section {
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  /* Style the navigation menu */
+  nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Style the content */
+  article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #d8dfe0c0;
+    padding: 10px;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: rgb(153, 182, 214);
+    padding: 10px;
+    text-align: center;
+    color: rgb(243, 38, 11);
+    text-shadow: 5px 2px 4px rgba(224, 93, 81, 0.822);
+   
+  }
+  
+  /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+  ul li a{
+    text-decoration: none;
+    margin: 5px;
+  }
+ 
+  .left img{
+      width: 80%;
+      height: auto;
+      margin: 15px;
+  }
+  .left{
+      float: left;
+      width: 30%;
+  }
+  .right{
+    float: right;
+    width: 70%;
+}
+h1{
+  text-shadow: 5px 2px 4px rgb(216, 94, 179);
+  color: rgb(245, 8, 225);
+}
