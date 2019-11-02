@@ -1,0 +1,44 @@
+.avatar{
+    width: 200px;
+    height: 200px;
+}
+
+    hr {
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        border-style: inset;
+      }
+     .reviews1{
+    text-shadow: 5px 2px 4px rgb(126, 24, 55);
+    font-weight:bold;
+    color: rgb(253, 33, 187)
+    
+}
+h3{
+    color: red
+}
+.col-md-8{
+    text-align: center;
+}
+.aa{
+    width: 50%;
+    background-color: white;
+    text-align: center;
+    height: 200px;
+    border-radius: 5px;
+}
+.modal{
+   margin-left: 35%;
+   margin-top: 150px;
+}
+.pass{
+    margin-top: 40px;
+}
+img{
+   width: 50px;
+   height: 50px;
+}
+.background{
+    background-color: #17a2b8;
+}

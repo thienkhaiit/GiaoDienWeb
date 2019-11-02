@@ -44,8 +44,8 @@
                     <li style="    margin-top: -19px;"> <a class="dropdown-item" [routerLink]="['/password']"><b>Quên Mật Khẩu</b></a></li>
                   <hr>
                     <li><a class="dropdown-item" [routerLink]="['/home']"><b>Đăng Xuất</b></a></li>
-                    <li><a class="dropdown-item" ><b>Đổi Mật Khẩu</b></a></li>
-                    <li><a class="dropdown-item" ><b>Cập Nhật Tài Khoản</b></a></li>
+                    <li><a class="dropdown-item" [routerLink]="['/change']"><b>Đổi Mật Khẩu</b></a></li>
+                    <li><a class="dropdown-item" [routerLink]="['/update']"><b>Cập Nhật Tài Khoản</b></a></li>
                   </ul>
                 </div>
               </div>
@@ -66,7 +66,7 @@
                                     <div class="fadeIn first">
                                       <img src="https://previews.123rf.com/images/happyjob/happyjob1608/happyjob160800132/62039041-user-icon.jpg" id="icon" alt="User Icon" />
                                     </div>
-                                    <form action="home" >
+                                    <form action="/home" >
                                         <input type="text" id="password" class="fadeIn third" name="login" placeholder="Name">
                                       <input type="email" id="login1" class="fadeIn second" name="login" placeholder="Email">
                                       <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">

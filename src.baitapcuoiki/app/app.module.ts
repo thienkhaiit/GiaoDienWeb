@@ -10,6 +10,7 @@ import { IntroduceComponent } from './introduce/introduce.component';
 import { CommentComponent } from './comment/comment.component';
 import { PasswordretrievalComponent } from './passwordretrieval/passwordretrieval.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { UpdateaccountComponent } from './updateaccount/updateaccount.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
     CommentComponent,
     PasswordretrievalComponent,
     ChangepasswordComponent,
+    UpdateaccountComponent,
 
   ],
   imports: [
@@ -32,6 +34,8 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
       { path: 'password', component: PasswordretrievalComponent },
       { path: 'introduce', component: IntroduceComponent },
       { path: 'comment', component: CommentComponent },
+      { path: 'change', component: ChangepasswordComponent },
+      { path: 'update', component: UpdateaccountComponent },
       { path: 'web/:Id', component: WebComponent },
       // { path: 'web', component: WebComponent },
       { path: '**', redirectTo: '', pathMatch: 'full' },
