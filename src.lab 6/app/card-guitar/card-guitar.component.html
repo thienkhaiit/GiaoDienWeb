@@ -1,0 +1,49 @@
+<!-- <div class="card shopping-cart">
+    <table class="table text-center">
+            <thead >
+              <tr class="bg-info">
+                <th scope="col">item</th>
+                <th scope="col">price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody > 
+
+              <tr *ngFor='let item of guitars'>            
+                <td>{{item.productname}}</td>               
+                <td></td>
+                <td>HUY</td>
+                 <td></td>
+              
+                
+              </tr>
+            </tbody>
+          </table>   
+</div> -->
+
+
+
+<h2>ShoPingCart</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>price</th>
+    <th >Quantity</th>
+    <th >Delete</th>
+  </tr>
+  <tr *ngFor='let item of guitars'>
+    <td >{{item.productname}}</td>
+    <td>{{item.price}}</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="1"><b>Tổng:</b></td>
+    
+    <td>$250</td>
+  </tr>
+</table>
+<a class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-shopping-cart"></span>Buy
+</a>

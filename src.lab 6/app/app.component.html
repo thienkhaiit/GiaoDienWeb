@@ -1,80 +1,96 @@
-<div class="container">
-  <header>
-    <h1>MY GUITAR SHOP</h1>
-  </header>
 
-  <section>
-    <nav>
-      <ul>
-        <h3><b>Menu Sản Phẩm </b></h3>
-        <li><a [routerLink]="['/product']"><b>Product selected</b></a></li>
-        <li><a [routerLink]="['/cart']"><b>View Cart</b></a></li>
-        <li><a [routerLink]="['/quatity']"><b>Price</b></a></li>
-      </ul>
-      <ul>
-          <li><a [routerLink]="['/product']"><b>Product selected</b></a></li>
-          <li><a [routerLink]="['/cart']"><b>View Cart</b></a></li>
-          <li><a [routerLink]="['/quatity']"><b>Price</b></a></li>
+<!-- 
+  <div class="card">
+    <div class="card-header" style="box-shadow: 0 4px 2px -3px;">
+        <h1>My Guitar Shop</h1>
+    </div>
+    <div class="card-body">
+        <div class="row">
+           noi dung trai 
+          <div class="col-md-2">        
+                  <nav class="nav flex-column">
+                      <ul>
+                          <a href="#" style="color: sandybrown;"><li>Links</li></a> 
+                          <ul style="list-style: none; margin-left: -7%;">
+                         <a href=""(click)='LoadData()'><li>View Cart</li></a>
+                         <a href=""><li>Login/Register</li></a>
+                         <a href=""><li>Home</li></a>       
+                         <a [routerLink]="['/yourcart']"><li>yourcart</li></a>       
+                          </ul>
+                      </ul>
+                  </nav>
+                  <nav class="nav flex-column">
+                      <ul>
+                          <a href="#" style="color: sandybrown; text-decoration: none;"><li>Categories</li></a> 
+                          <ul style="list-style: none; margin-left: -7%;" *ngFor='let a of categories'>
+                         <a [routerLink]="['/detail']"><li>{{a.catename}}</li></a>
+                        
+                          </ul>
+                      </ul>
+                  </nav>
+                  <nav class="nav flex-column">
+                      <ul>
+                          <a href="#" style="color: sandybrown; text-decoration: none;"><li>Temp Link</li></a> 
+                          <ul style="list-style: none; margin-left: -7%;">
+                         <a href=""><li>Admin</li></a>                  
+                          </ul>
+                      </ul>
+                  </nav>
+                
+          </div>
+           noi dung phai 
+          <div class="col-md-10">
+              <router-outlet></router-outlet>
+          </div>
+            
+        </div>
+    </div>
+    <div class="card-footer" style="text-align: right;">
+        <b>2010 My Guitar Shop.</b>
+    </div>
+</div> -->
+
+
+
+
+
+
+<div class="container">
+    <header>
+      <h1>MY GUITAR SHOP</h1>
+    </header>
+  
+    <section>
+      <nav>
+        <ul>
+          <h3><b>Menu Sản Phẩm </b></h3>
+          <li><a [routerLink]="['/detail']"><b>Product selected</b></a></li>
+          <li><a [routerLink]="['/home']"><b>View Cart</b></a></li>
+          <li><a [routerLink]="['/yourcart']"><b>Price</b></a></li>
         </ul>
         <ul>
-            <li><a [routerLink]="['/product']"><b>Product selected</b></a></li>
-            <li><a [routerLink]="['/cart']"><b>View Cart</b></a></li>
-            <li><a [routerLink]="['/quatity']"><b>Price</b></a></li>
+          
+            <li><a [routerLink]="['/detail']"><b>Product selected</b></a></li>
+            <li><a [routerLink]="['/home']"><b>View Cart</b></a></li>
+            <li><a [routerLink]="['/yourcart']"><b>Price</b></a></li>
           </ul>
-    </nav>
+          <ul>
+          
+            <li><a [routerLink]="['/detail']"><b>Product selected</b></a></li>
+          <li><a [routerLink]="['/home']"><b>View Cart</b></a></li>
+          <li><a [routerLink]="['/yourcart']"><b>Price</b></a></li>
+          </ul>
+      </nav>
+      <article>
     
-    <!-- <article>
-        <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-        <h1>London</h1>
-      <div class="a">
-         
-          <div class="left">
-            <img src="http://file.vforum.vn/hinh/2016/08/hinh-anh-dep-ve-am-nhac-music-1.jpg" >
-          </div>
-          <div class="right">
-              <h4>tên sản phẩm</h4>
-              <p><b>Your price:</b>$43.23</p>
-          <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-
-          </div>
-      </div>
-
-
-      <div class="a">
-         
-          <div class="left">
-            <img src="http://file.vforum.vn/hinh/2016/08/hinh-anh-dep-ve-am-nhac-music-1.jpg" >
-          </div>
-          <div class="right">
-              <h4>tên sản phẩm</h4>
-              <p><b>Your price:</b>$43.23</p>
-          <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-
-          </div>
-      </div>
-
-      <div class="a">
-         
-          <div class="left">
-            <img src="http://file.vforum.vn/hinh/2016/08/hinh-anh-dep-ve-am-nhac-music-1.jpg" >
-          </div>
-          <div class="right">
-              <h4>tên sản phẩm</h4>
-              <p><b>Your price:</b>$43.23</p>
-          <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-
-          </div>
-      </div>
-    </article> -->
-    <article>
+        <router-outlet></router-outlet>
+      </article>
+    </section>
   
-      <router-outlet></router-outlet>
-    </article>
-  </section>
-
-  <footer>
-    <p>END !</p>
-  </footer>
-</div>
-
-
+    <footer>
+      <p>END !</p>
+    </footer>
+  </div>
+  
+  
+  

@@ -1,0 +1,17 @@
+
+            <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+            <h2>The Goods</h2>
+          <div class="a">
+            <div class="row" *ngFor='let a of guitars'>               
+                <div class="left">
+                    <img src="assets/images/{{a.imagesurl}}" >
+                </div>
+                <div class="right">
+                    <h4> <a  [routerLink]="['/detail',a.id]"><p><b>{{a.productname}}</b></p></a></h4>
+                    <p><b>Your price:</b>{{a.price | number}}</p>
+                    <p>{{a.description}}</p>
+        
+                </div>
+            </div>
+               
+          </div>

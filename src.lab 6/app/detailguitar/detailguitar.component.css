@@ -1,0 +1,45 @@
+/* img{
+    width: 300px;
+}
+.col-md-5 button{
+    margin-left: 2%;
+}
+ li a{
+ text-decoration: none;
+}
+ul {
+    list-style: none;
+    }
+input{
+    width: 6%;
+    margin-right: 2%;
+} */
+
+h2{
+    color: goldenrod;
+}
+.left img{
+    width: 80%;
+    height: auto;
+    margin: 15px;
+}
+.left{
+    float: left;
+    width: 30%;
+}
+.right{
+  float: right;
+  width: 70%;
+}
+.btn{
+    margin-left: 10%;
+    border-radius: 5% ;
+    font-size: 15px;
+}
+select{
+    width: 50px;
+    margin-left: 2%;
+}
+h3{
+    color: red;
+}

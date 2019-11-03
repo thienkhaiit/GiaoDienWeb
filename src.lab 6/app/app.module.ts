@@ -1,28 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule} from '@angular/router';
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http'
+
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
-import { CartComponent } from './cart/cart.component';
-import { QuatityComponent } from './quatity/quatity.component';
+import { GuitarComponent } from './guitar/guitar.component';
+import { DetailguitarComponent } from './detailguitar/detailguitar.component';
+import { CardGuitarComponent } from './card-guitar/card-guitar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    CartComponent,
-    QuatityComponent
+    GuitarComponent,
+    DetailguitarComponent,
+    CardGuitarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot([
-      { path: '',component: CartComponent },
-       {path: 'product', component:ProductComponent},
-       {path: 'cart', component:CartComponent},
-       {path: 'quatity', component:QuatityComponent},
-      ])
+      { path: '', component: GuitarComponent },
+      { path: 'home', component: GuitarComponent },
+      { path: 'home/:cid', component: GuitarComponent },
+      { path: 'detail/:pid', component: DetailguitarComponent },
+      { path: 'yourcart', component: CardGuitarComponent },     
+      // { path: 'list-product/:productId', component: ProductdetailComponent },
+      { path: '**', redirectTo: '', pathMatch: 'full' },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,49 @@
+<!-- <h3 style="text-align: left;">shop guitar</h3>
+<div class="row" >
+    <div class="col-md-3">
+        <img src="assets/images/{{product.imagesurl}}" alt="">
+    </div>
+    <div class="col-md-9">
+            Name: {{product.productname}} <br>
+            listPrice: {{product.price | number}}<br>
+            discount:{{product.discount}}<br>          
+            quantity:      
+            <input type="number">
+            <button  (click)='addToCart(guitars)'>add to cart</button> <br>
+            <h5>deresiption:</h5>
+          <p>{{product.description}}</p>
+          <h6>New features</h6>
+          <ul>
+              <li *ngFor='let f of features'> {{f.text}} </li>
+          </ul>
+    </div>
+</div>
+
+
+  -->
+  <h3>Product details you love</h3>
+  <div class="a">
+     
+      <div class="left">
+        <img src="assets/images/{{product.imagesurl}}" alt="">
+      </div>
+      <div class="right">
+          <h4>{{product.productname}}</h4>
+          <p>Your price:{{product.price | number}}</p>
+          <p>Discount:{{product.discount}}</p>
+          <h6>New features</h6>
+          <ul>
+              <li *ngFor='let f of features'> {{f.text}} </li>
+          </ul>
+      </div>
+      <b>Quatity</b>
+      <select >
+        <option value="volvo">1</option>
+        <option value="saab">2</option>
+        <option value="vw">3</option>
+        <option value="audi" selected>4</option>
+      </select>
+  
+      <button class="btn btn-info btn-lg" (click)='addToCart(guitars)'>Add to cart</button> 
+      
+    </div>
