@@ -14,8 +14,40 @@ guitars:any;
     this.guitars=this._guitar.getItems();
     console.log(this.guitars);
   }
-  delete(guitars){
-    window.alert('Your product has been added to the cart!');
-    this._guitar.addToCart(this.guitars);
+  
+  TongTien()
+  {
+    let s=0;
+    this.guitars.forEach(function(item)
+    {
+      s=s+item.price*item.sl;
+    })
+    return s;
   }
-}
+  Tang(cid)
+  {
+    for(let i=0;i<this.guitars.length;i++)
+    {
+      if(this.guitars[i].id===cid){
+        this.guitars[i].sl++;
+      }
+    }
+  }
+  Tu(cid)
+  {
+    for(let i=0;i<this.guitars.length;i++)
+    {
+      if(this.guitars[i].id===cid && this.guitars[i].sl > 0){
+        this.guitars[i].sl--
+      }
+    }
+  }
+  delete(cid) {
+    var a = confirm ('Do you want to delete this product?');
+    if ( a == true){
+      const index= this.guitars.findIndex( word => word.Id === cid);
+      this.guitars.splice(index , 1);
+    } else {
+      return false;
+  }
+}}

@@ -10,6 +10,7 @@ export class DetailguitarComponent implements OnInit {
   product : any;
   listproduct : any;  
   features;
+ 
   constructor(private _guitar:GuitarsService, private route:ActivatedRoute) { }
 
   ngOnInit() {
@@ -23,7 +24,7 @@ export class DetailguitarComponent implements OnInit {
 
   }
   addToCart(guitars){
-    window.alert('Your product has been added to the cart!');
+    window.alert('Do you agree to add it to the bag?');
     this._guitar.addToCart(this.product);
   }
 }
