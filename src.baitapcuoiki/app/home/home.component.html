@@ -26,7 +26,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor='let p of Subjects | paginate: { itemsPerPage:  itemsPer, currentPage: current }'>
-                            <td><a >{{p.Name}}</a></td>
+                            <td><a [routerLink]="['/web',p.Id]">{{p.Name}}</a></td>
                            
                          </tr> 
                         <tr class="menu1">

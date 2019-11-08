@@ -1,4 +1,82 @@
+.container{
+    margin-top: 10px;
+    height: 300px;
+}
+/* css ảnh bannner */
+.banner img{
+   width: 100%;
+   height: 150px;
+   
+   border-radius: 3px;
+   box-shadow: 5px 5px 5px rgb(141, 138, 138);
+   -moz-box-shadow: 5px 5px 5px rgb(141, 138, 138);
+   -webkit-box-shadow: 5px 5px 5px rgb(141, 138, 138); 
 
+}
+/* css menu */
+.navbar{
+    background-color: #cccccc;
+    border: none;
+    box-shadow: 5px 5px 5px rgb(141, 138, 138);
+-moz-box-shadow: 5px 5px 5px rgb(141, 138, 138);
+-webkit-box-shadow: 5px 5px 5px rgb(141, 138, 138); 
+}
+.nav a{
+color: red
+}
+
+.nav li img{
+    width: 100px;
+    height: 70px;
+    padding: 2px;
+}
+.nav li a{
+    /* padding: 26px; */
+    margin: 10px;
+}
+.nav li a:hover{
+    color: #070bf2;
+    background-color: #fd06fd
+}
+.btn{
+    /* padding: 25px; */
+    margin: 18px;
+    background-color: #cccccc
+}
+/* .btn:hover{
+    color: #070bf2;
+background-color:  #fd06fd
+} */
+/* .dropdown-menu{
+    padding: 2px;
+} */
+.nav1 li {
+    list-style: none;
+    margin-left: -25%;
+}
+.nav1 li a{
+    text-decoration: none;
+}
+.li:hover{
+    position:cursor;
+}
+#dropdownMenu2{
+    color: red;
+    margin-left: -30px
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    /* margin-left: 0; */
+    border-style: inset;
+    /* border-width: 1px; */
+    /* text-align: center; */
+    margin-left: -25%;
+    width: 120%;
+  }
+ /*gang ki*/
+ 
 .wrapper {
     display: flex;
     align-items: center;
@@ -87,7 +165,30 @@
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
   }
-  
+  input[type=password] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+  }
+  input[type=password]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+  }
   input[type=text]:focus {
     background-color: #fff;
     border-bottom: 2px solid #5fbae9;
@@ -120,7 +221,9 @@
   input[type=text]:placeholder {
     color: #cccccc;
   }
-  
+  input[type=password]:placeholder {
+    color: #cccccc;
+  }
   
   
   /* ANIMATIONS */
@@ -231,6 +334,7 @@
   
   #icon {
     width:60%;
+    height: 190px;
   }
   .fadeIn img{
     width: 50%;

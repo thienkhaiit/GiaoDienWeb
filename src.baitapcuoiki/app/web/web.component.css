@@ -2,8 +2,10 @@
     border: 2px solid rgb(215, 217, 218);
     margin: 10px;
     margin-bottom: 50px;
-    margin-top: 50px
+    margin-top: 50px;
+   
 }
+
 .card-header{
     background-color: rgb(222, 226, 230);
     height: 30PX;
@@ -108,15 +110,18 @@ thead th{
     font-size: 25px;
 }
 table{
-    margin: 10px;
+    margin: 50px;
     box-shadow: 5px 5px 5px rgb(182, 179, 179);
 -moz-box-shadow: 5px 5px 5px rgb(182, 179, 179);
 -webkit-box-shadow: 5px 5px 5px rgb(182, 179, 179); 
 width: 93%;
+text-align: center;
 }
+
 tbody td a{
     text-decoration: none;
 }
+
 tbody td a:hover{
     flex-direction :wrap-reverse
 }

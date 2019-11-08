@@ -11,7 +11,10 @@ import { CommentComponent } from './comment/comment.component';
 import { PasswordretrievalComponent } from './passwordretrieval/passwordretrieval.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { UpdateaccountComponent } from './updateaccount/updateaccount.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
 
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,21 +25,27 @@ import { UpdateaccountComponent } from './updateaccount/updateaccount.component'
     PasswordretrievalComponent,
     ChangepasswordComponent,
     UpdateaccountComponent,
+    RegistrationComponent,
+    LoginComponent,
+ 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgxPaginationModule,
+    HttpClientModule,
     RouterModule.forRoot([
-      { path: '',component: IntroduceComponent   },
+      { path: '',component: IntroduceComponent},
       {path: 'home', component:HomeComponent},
+      {path: 'registration', component:RegistrationComponent},
+      {path: 'login', component:LoginComponent},
       { path: 'password', component: PasswordretrievalComponent },
       { path: 'introduce', component: IntroduceComponent },
       { path: 'comment', component: CommentComponent },
       { path: 'change', component: ChangepasswordComponent },
       { path: 'updateaccount', component: UpdateaccountComponent },
-      { path: 'web/:Id', component: WebComponent },
+      { path: 'web/:mid', component: WebComponent },
       // { path: 'web', component: WebComponent },
       { path: '**', redirectTo: '', pathMatch: 'full' },
      
