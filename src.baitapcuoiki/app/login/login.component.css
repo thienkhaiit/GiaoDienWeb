@@ -26,9 +26,9 @@ color: red
 }
 
 .nav li img{
-    width: 100px;
-    height: 70px;
-    padding: 2px;
+  width: 45px;
+  height: 35px;
+  padding: 7px;
 }
 .nav li a{
     /* padding: 26px; */
@@ -36,7 +36,9 @@ color: red
 }
 .nav li a:hover{
     color: #070bf2;
-    background-color: #fd06fd
+    background-color: #fd06fd;
+   
+    
 }
 .btn{
     /* padding: 25px; */
@@ -347,7 +349,7 @@ hr {
     #login {
         
         margin-top:50px;
-        margin-left:-1.1%;
+        /* margin-left:-1.1%; */
         width: 100%;
         margin-bottom: -25px;
        
@@ -423,7 +425,7 @@ hr {
         height: 70%;
     }
     .form-group .form-control{
-        width: 139%;
+        width: 100%;
         margin-left: 0px
     }
     .btn a:hover{
