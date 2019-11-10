@@ -6,80 +6,63 @@
         
         <div class="modal" id="myModal">
             <div class="modal-dialog">
-                    <!-- <div class="col-md-6 col-md-offset-3">
-                            <h2>Register</h2>
-                            <form name="form" ng-submit="vm.register()" role="form">
-                                <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
-                                    <label for="username">First name</label>
-                                    <input type="text" name="firstName" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
-                                    <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>
-                                </div>
-                                <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
-                                    <label for="username">Last name</label>
-                                    <input type="text" name="lastName" id="Text1" class="form-control" ng-model="vm.user.lastName" required />
-                                    <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
-                                </div>
-                                <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
-                                    <label for="username">Username</label>
-                                    <input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
-                                    <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
-                                </div>
-                                <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
-                                    <label for="password">Password</label>
-                                    <input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
-                                    <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
-                                </div>
-                                <div class="form-actions">
-                                    <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Register</button>
-                                    <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-                                    <a href="#!/login" class="btn btn-link">Cancel</a>
-                                </div>
-                            </form>
-                        </div> -->
-
-                        
                                 <div class="wrapper fadeInDown">
                                     <div id="formContent">
                                       <div class="fadeIn first">
                                         <img src="https://previews.123rf.com/images/happyjob/happyjob1608/happyjob160800132/62039041-user-icon.jpg" id="icon" alt="User Icon" />
                                       </div>
-                                      <form name="form" ng-submit="vm.register()"action="/introduce" role="form">
-                                            <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
-                                                <label for="username">First name</label>
-                                                <input type="text" name="firstName" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
-                                                <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>
+                                      <form  #formUser ="ngForm" (ngSubmit)="onSubmit(formUser)" oninput='repass.setCustomValidity(repass.value != password.value ? "Passwords" : "")' >
+                                      
+                                        <div class="form-group" >
+                                            <label for="username">Username</label>
+                                            <input  name="username" type="text" class="form-control" [(ngModel)]="username"  pattern="^[A-Za-z0-9_\.]{4,18}$">
+                                        </div>       
+                                        <div class="form-group" >
+                                            <label for="username">You Email</label>
+                                            <input  name="username" type="email" class="form-control" [(ngModel)]="email"  pattern="^[A-Za-z0-9_.]{2,32}@([a-zA-Z0-9]{3,12})(.[a-zA-Z]{2,12})+$">
+                                        </div>                       
+                                        <!--nhập và ktra passwort -->
+                                        <div class="form-row">
+                                                <label for="passwort">Passwort</label>
+                                                <div  *ngIf="!check">
+                                                    <input  type="password" class="form-control" name="password" [(ngModel)]="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,20}" required placeholder="5-20 kí tự,chứa 1 chữ hoa,1 chữ thường,1 chữ số">
+                                                   
+                                                </div>
+                                                <div  *ngIf="check">
+                                                    <input [(ngModel)]="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,20}" >
+                                                    
+                                                </div>
+                                        </div>
+                                        <!--nhập lại và ktra passwort -->
+                                        <div class="form-row">
+                                                <label for="passwort">Comfirm Passwort</label>
+                                                <div  *ngIf="!check">
+                                                    <input placeholder="Mật khẩu phải giống nhau" type="password" class="form-control" name="password" [(ngModel)]="repass" type="password" class="form-control" name="repass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,20}" required>
+                                                   
+                                                </div>
+                                                <div  *ngIf="check">
+                                                    <input  [(ngModel)]="repass"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,20}" required >
+                                                   
+                                                </div>
                                             </div>
-                                            <div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }">
-                                                <label for="username">Last name</label>
-                                                <input type="text" name="lastName" id="Text1" class="form-control" ng-model="vm.user.lastName" required />
-                                                <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
-                                            </div>
-                                            <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
-                                                <label for="username">Username</label>
-                                                <input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
-                                                <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
-                                            </div>
-                                            <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
-                                                <label for="password">Password</label>
-                                                <input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
-                                                <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
-                                            </div>
+                                            <div class="form-group" >
+                                                    <input [(ngModel)]="checkbox" id="checkdk" class="form-check-input" type="checkbox" name="checkbox" required>
+                                                    <label class="form-check-label" for="checkdk">Đồng ý các điều khoản</label>
+                                            </div> 
+                                          
+
                                             <div class="form-actions">
-                                                <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Register</button>
+                                                    <button (click)="onSM(formUser)" [disabled]="formUser.invalid" type="submit" >
+                                                            Register
+                                                        </button>
+                                              
                                                 <img ng-if="vm.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-                                                <a href="#!/login" class="btn btn-link">Cancel</a>
+                                                <button (click)='onReset(formUser)' type="button" >
+                                                        Cancel 
+                                                    </button>
                                             </div>
                                         </form>
-<!--                                       
-                                          <input type="text" id="password" class="fadeIn third" name="login" placeholder="Name">
-                                        <input type="email" id="login1" class="fadeIn second" name="login" placeholder="Email">
-                                        <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
-                                        <input type="password" id="password" class="fadeIn third" name="login" placeholder="Confirm Password">
-                                        <form action="/home" >
-                                        <button type="submit" class="btn btn-info" style="background-color:#fff;margin-top:8px;color:#337ab7" data-toggle="modal" >
-                                         Login
-                                        </button>
-                                      </form> -->
+
                                      
                                     </div>
                                   </div>
@@ -91,41 +74,12 @@
 
 
 
-<!-- 
-
-  <div class="container">  
-        <h2>Employee Registration</h2>  
-        <form class="form-horizontal" [formGroup]="userForm" (submit)="saveUser()">  
-            <div class="form-group">  
-                <label class="control-label col-sm-2" for="name">Name:</label>  
-                <div class="col-sm-10">  
-                    <input class="form-control" formControlName="name" id="name" />  
-                </div>  
-            </div>  
-            <div class="form-group">  
-                <label class="control-label col-sm-2" for="email">Email:</label>  
-                <div class="col-sm-10">  
-                    <input class="form-control" formControlName="email" id="email" />  
-                     
-                </div>  
-            </div>  
-            <div class="form-group">  
-                <label class="control-label col-sm-2" for="password">Password:</label>  
-                <div class="col-sm-10">  
-                    <input class="form-control" type="password" formControlName="password" id="password" />  
-                      
-                </div>  
-            </div>  
-            <div class="form-group">  
-                <label class="control-label col-sm-2" for="confirmPassword">Confirm Password:</label>  
-                <div class="col-sm-10">  
-                    <input class="form-control" type="password" formControlName="confirmPassword" id="confirmPassword" />  
-                </div>  
-            </div>  
-            <div class="form-group">  
-                <div class="col-sm-offset-2 col-sm-10">  
-                    <button type="submit" [disabled]="!userForm.valid" class="btn btn-success">Submit</button>  
-                </div>  
-            </div>  
-        </form>  
-    </div>   -->
+  <div class="my-form pt-4 mb-3" [hidden]='!_submit'>
+        <h4 class="text-center text-danger">Đăng Ký Thành Công</h4>
+        <div class="text-center pt-3 pb-4">
+            <button (click)="_submit =!_submit" class="btn btn-outline-info hvr-bt mr-4">
+                <span class="ml-1">QUAY LẠI</span>
+            </button>
+            <button [routerLink]="['/login']" class="btn btn-outline-info hvr-bt">ĐĂNG NHẬP</button>
+        </div>
+    </div>

@@ -340,3 +340,13 @@ hr {
     width: 50%;
     height: 200px;
   }
+  .my-form{
+    padding:20px ;
+    margin: 10% 25% 0;
+    width: 50%;
+    height: 150px;
+    background-color: beige;
+    box-shadow: 5px 5px 5px rgb(231, 253, 102);
+    -moz-box-shadow: 5px 5px 5px rgb(231, 253, 102);
+    -webkit-box-shadow: 5px 5px 5px rgb(231, 253, 102);
+  }

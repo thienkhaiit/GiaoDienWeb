@@ -16,11 +16,25 @@ export class WebComponent implements OnInit {
     this.route.paramMap.subscribe(para => {
         const Id = para.get('mid');
         this.quize.getAlldetailSubject(Id).subscribe(data => this.quiz = data)
-        this.dongho();
+        
+        //gọi biến
+        this.time();
       }
      
       );
   }
+  // ketqua
+  answers=[];
+  point=0;
+  pointTest() {
+		var sum = 0;
+		for (var i = 0; i < this.quiz.length; i++) {
+			if (this.answers[i] == this.quiz[i].AnswerId) {
+				sum += this.quiz[i].Marks;
+				this.point = sum;
+			}
+		}
+	}
 
   // phân trang
   currentPage=1;
@@ -42,14 +56,14 @@ export class WebComponent implements OnInit {
     this.currentPage=1
   }
   //tạo thời gian làm bài
-  dongho() {
+  time() {
 		var minute = 60;
 		var second = 0;
 
 		var clear = setInterval(function() {
 			if (minute == 0 && second == 0) {
 				console.log(this.outOfTime)
-				document.getElementById('dongho').style.display = 'none'
+				document.getElementById('time').style.display = 'none'
 				clearInterval(clear);
 				alert('Het gio lam bai');
 			}
@@ -59,12 +73,19 @@ export class WebComponent implements OnInit {
 					minute -= 1;
 					second = 59;
 				}
-				document.getElementById('dongho').innerHTML = minute + 'P: ' + second + 's';
+				document.getElementById('time').innerHTML = minute + 'p: ' + second + 's';
 			}
 		}, 1000)
   }
   //đếm câu hỏi
   socauhoi(){
     return this.quiz.length;
+  }
+  //tính điểm
+d=0;
+  diem(){
+   var diem=0;
+    diem=this.point*(10/this.quiz.length);
+    this.d=diem
   }
 }

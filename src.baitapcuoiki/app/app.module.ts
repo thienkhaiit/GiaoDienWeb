@@ -14,6 +14,9 @@ import { UpdateaccountComponent } from './updateaccount/updateaccount.component'
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 
+
+
+import {FormsModule} from '@angular/forms';//form
 import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import {HttpClientModule} from '@angular/common/http'
     AppRoutingModule,
     NgxPaginationModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: '',component: IntroduceComponent},
       {path: 'home', component:HomeComponent},

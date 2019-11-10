@@ -10,14 +10,27 @@ import { ActivatedRoute} from '@angular/router';
  
 })
 export class LoginComponent implements OnInit {
-  username 
-  password 
-  configurl = 'https://cuong-dev1-api.herokuapp.com/studentsTwo?fbclid=IwAR1zGL8Urjfb6BaDhwaXk4LJ5cGKL24MlKLQh3kaRXjf0h1MlxGbSgfbRNg'
-  students: any;
+  username =null;
+	password =null;
+	//dang nhap
+	showCheckall: boolean = false;
+	showCheck: boolean = false;
+	showCheck1: boolean = false;
+	showCheckpass: boolean = false;
+	//dang ký
+	showChecksu1: boolean = false;
+	showChecksu2: boolean = false;
+	showChecksu3: boolean = false;
+	showChecksu4: boolean = false;
+
+  
   constructor( private http: HttpClient,private router: Router) { }
-  getconfig() {
-    return this.http.get(this.configurl)
-  }
+  configUrl='https://cuong-dev1-api.herokuapp.com/studentsTwo';
+	students: any;
+	getconfig() {
+	  return this.http.get(this.configUrl);
+	}
+
   ngOnInit() {
     this.getconfig().subscribe(data => {
       this.students = data;
@@ -25,16 +38,33 @@ export class LoginComponent implements OnInit {
     })
   }
   check() {
-    let ui = false;
-    this.students.forEach(element => {
-      if (element.username == this.username && element.password == this.password) {
-        alert('ok')
-        ui = true;
-        this.router.navigate(["/home"]);
-      }
-    });
-    if (ui == false)
-      alert('tài khoản không đúng')
-  }
 
+		this.students.forEach(element => {
+		
+		  if (this.username == null && this.password == null )                                  
+		  { 
+			return this.showCheckall=true; 
+		  } 
+		  if (this.password == null )                                  
+		  { 
+			this.showCheckpass=true;
+			return this.showCheckall=false; 
+		  } 
+		  if (element.username == this.username && element.password == this.password) {
+			this.router.navigate(["/@"])
+			alert('Wellcome '+ element.fullname)
+			return true;
+		  }
+		  
+     
+		 
+		});
+	  }
+
+
+
+
+
+
+  
 }
